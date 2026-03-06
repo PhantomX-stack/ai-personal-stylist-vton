@@ -11,10 +11,11 @@
 
 ## 🚀 Live Demo
 
-**[🌐 Frontend Demo](https://ai-personal-stylist.vercel.app)** | **[🔌 Backend API](https://ai-personal-stylist-api.onrender.com/docs)**
+**[🌐 Frontend Demo](https://ai-personal-stylist.vercel.app/)** | **[🔌 Backend API](https://ai-personal-stylist-api.onrender.com/docs)**
 
 **Quick Test:**
-1. Visit the [live demo](https://ai-personal-stylist.vercel.app)
+
+1. Visit the [live demo](https://ai-personal-stylist.vercel.app/)
 2. Upload a selfie
 3. Get AI outfit recommendations
 4. Try-on clothes virtually
@@ -24,13 +25,14 @@
 
 ## 📸 Screenshots
 
-| Homepage | Virtual Try-On | AI Chat |
-|----------|----------------|----------|
-| ![Homepage](docs/screenshots/homepage.png) | ![Try-On](docs/screenshots/tryon.png) | ![Chat](docs/screenshots/chat.png) |
+> **Note:** Screenshots available in the live demo. Visit the application to see the interface in action!
 
-| Insights Dashboard | Profile Analysis |
-|-------------------|------------------|
-| ![Insights](docs/screenshots/insights.png) | ![Analysis](docs/screenshots/analysis.png) |
+**Features Showcase:**
+- 🏠 **Homepage** - Clean, modern interface with instant access to all features
+- 👗 **Virtual Try-On** - Real-time clothing visualization on your photo
+- 💬 **AI Chat** - Interactive fashion advisor with personalized recommendations
+- 📊 **Insights Dashboard** - Analytics and trend data visualization
+- 👤 **Profile Analysis** - Detailed skin tone and body type analysis
 
 ---
 
@@ -39,7 +41,7 @@
 **AI Personal Stylist** is an intelligent fashion recommendation system that combines **computer vision**, **machine learning**, and **big data analytics** to provide:
 
 - 🎯 **AI-Powered Skin Tone Analysis** - Detects your skin tone (warm, cool, neutral) for perfect color matching
-- 👤 **Body Type Estimation** - Analyzes body proportions for flattering outfit suggestions
+- 👤 **Body Type Estimation** - Analyzes body proportions for flattering outfit suggestions  
 - 🎨 **Smart Outfit Recommendations** - Ranks outfits by compatibility, trends, and mood
 - 👗 **Virtual Try-On** - See how clothes look on you before buying
 - 💬 **AI Fashion Chatbot** - Get styling advice instantly
@@ -50,6 +52,7 @@
 ## 🎯 Key Features
 
 ### 1. **AI Vision Analysis**
+
 - **Face Detection** - Identifies facial features and geometry
 - **Skin Tone Classification** - Warm, cool, or neutral analysis
 - **Pose Estimation** - Uses MediaPipe for body landmark detection
@@ -57,6 +60,7 @@
 - **Lighting Analysis** - Assesses image quality for accurate recommendations
 
 ### 2. **Intelligent Outfit Recommendations**
+
 - **Personality-Based Matching** - Considers skin tone, body type, mood
 - **Trend-Aware Selection** - Uses fashion dataset statistics
 - **Confidence Scoring** - Returns ranked recommendations (0.0-1.0)
@@ -64,18 +68,21 @@
 - **Advanced Algorithm** - Weighted scoring by multiple factors
 
 ### 3. **Virtual Clothing Try-On**
+
 - **Real-Time Rendering** - See clothes on your body instantly
 - **Pose-Based Warping** - Clothing aligns with your body landmarks
 - **Seamless Blending** - Professional overlay without artifacts
 - **Multiple Garments** - Try tops, bottoms, complete outfits
 
 ### 4. **AI Fashion Chatbot**
+
 - **Context-Aware Responses** - Understands fashion queries
 - **Interactive Learning** - Learns from your preferences
 - **Styling Tips** - Professional fashion advice
 - **Trend Information** - Current fashion insights
 
 ### 5. **Fashion Trend Analytics**
+
 - **Color Popularity** - What colors are trending
 - **Outfit Combinations** - Popular pairings
 - **Seasonal Styles** - What to wear each season
@@ -86,13 +93,15 @@
 ## 🛠️ Technology Stack
 
 ### **Frontend**
+
 - **React 18** - Modern UI framework
-- **Vite** - Lightning-fast build tool  
+- **Vite** - Lightning-fast build tool
 - **TailwindCSS** - Utility-first styling
 - **Framer Motion** - Smooth animations
 - **Axios** - HTTP client
 
 ### **Backend**
+
 - **FastAPI** - High-performance Python framework
 - **OpenCV** - Computer vision processing
 - **MediaPipe** - Pose & face detection
@@ -100,12 +109,14 @@
 - **Python 3.9+** - Latest features
 
 ### **AI & ML**
+
 - **Color Matching** - HSV-based classification
 - **Body Analysis** - Anthropometric calculations
 - **Recommendation Engine** - Weighted scoring algorithm
 - **Fashion Datasets** - DeepFashion, Fashion-MNIST, Polyvore
 
 ### **Deployment**
+
 - **Vercel** - Frontend hosting (React)
 - **Render** - Backend hosting (FastAPI)
 - **GitHub** - Version control & CI/CD
@@ -115,7 +126,9 @@
 ## 📋 Installation Guide
 
 ### Prerequisites
+
 Make sure you have installed:
+
 - **Python 3.9+** - [Download](https://www.python.org/downloads/)
 - **Node.js 16+** - [Download](https://nodejs.org/)
 - **Git** - [Download](https://git-scm.com/)
@@ -149,8 +162,8 @@ pip install -r ../requirements.txt
 uvicorn app:app --reload
 ```
 
-✅ Backend runs at: `http://localhost:8000`  
-📚 API Docs at: `http://localhost:8000/docs`
+✅ **Backend runs at:** `http://localhost:8000`  
+📚 **API Docs at:** `http://localhost:8000/docs`
 
 ### Step 3: Setup Frontend
 
@@ -171,7 +184,7 @@ cp .env.example .env
 npm run dev
 ```
 
-✅ Frontend runs at: `http://localhost:5173`
+✅ **Frontend runs at:** `http://localhost:5173`
 
 ### Step 4: Open Application
 
@@ -194,7 +207,7 @@ POST /api/vision/extract-features
 ### Recommendations
 ```
 POST /api/recommendations/outfit
-GET  /api/recommendations/colors
+GET /api/recommendations/colors
 ```
 
 ### Virtual Try-On
@@ -206,10 +219,11 @@ POST /api/tryon/process
 ### Chatbot
 ```
 POST /api/chat/message
-GET  /api/chat/history
+GET /api/chat/history
 ```
 
 ### Interactive Docs
+
 Visit: **http://localhost:8000/docs** for Swagger UI
 
 ---
@@ -219,14 +233,11 @@ Visit: **http://localhost:8000/docs** for Swagger UI
 ### Recommendation Scoring Formula
 
 ```
-Outfit Score = 
-  0.35 × Color_Match +
-  0.25 × Body_Style_Fit +
-  0.20 × Trend_Score +
-  0.20 × Mood_Relevance
+Outfit Score = 0.35 × Color_Match + 0.25 × Body_Style_Fit + 0.20 × Trend_Score + 0.20 × Mood_Relevance
 ```
 
 **Factors:**
+
 - **Color Match (35%)** - Compatibility with detected skin tone
 - **Body Fit (25%)** - Suitability for estimated body type
 - **Trend Score (20%)** - Popularity in fashion dataset
@@ -246,6 +257,7 @@ Powered by real fashion industry data:
 - **Custom Dataset** - 10K+ trending combinations
 
 ### Dataset Statistics
+
 - Color trends analysis
 - Popular outfit pairings
 - Seasonal style frequencies
@@ -261,9 +273,9 @@ Powered by real fashion industry data:
 2. Connect repository to Vercel
 3. Set build settings:
    - Framework: Vite
-   - Root Directory: ./frontend
-   - Build Command: npm run build
-   - Output Directory: dist
+   - Root Directory: `./frontend`
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
 4. Add env variable: `VITE_API_URL=https://your-backend.onrender.com/api`
 5. Deploy!
 
@@ -317,7 +329,7 @@ Powered by real fashion industry data:
 ## 🗺️ Roadmap
 
 - [x] Core AI styling engine
-- [x] Virtual try-on system
+- [x] Virtual try-on system  
 - [x] Chatbot integration
 - [ ] User authentication & profiles
 - [ ] Saved style preferences
@@ -369,7 +381,7 @@ MIT License - See [LICENSE](LICENSE) file for details
 Have questions? Issues?
 
 - 🐛 [Report Issues](https://github.com/PhantomX-stack/ai-personal-stylist-vton/issues)
-- 💬 [Start Discussion](https://github.com/PhantomX-stack/ai-personal-stylist-vton/discussions)
+- 💬 [Start Discussion](https://github.com/PhantomX-stack/ai-personal-stylist-vton/discussions)  
 - 📧 Contact via GitHub
 - 📚 Check [Wiki](https://github.com/PhantomX-stack/ai-personal-stylist-vton/wiki)
 
