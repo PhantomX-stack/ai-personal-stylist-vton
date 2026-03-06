@@ -1,0 +1,20 @@
+{
+  "fashion_mnist": {
+    "source": "https://github.com/zalandoresearch/fashion-mnist/archive/refs/heads/master.zip",
+    "local_path": null,
+    "license": "MIT",
+    "status": "blocked: "
+  },
+  "deepfashion_readme": {
+    "source": "https://raw.githubusercontent.com/switchablenorms/DeepFashion2/master/README.md",
+    "local_path": null,
+    "license": "DeepFashion terms",
+    "status": "blocked: "
+  },
+  "polyvore_readme": {
+    "source": "https://raw.githubusercontent.com/xthan/polyvore-dataset/master/README.md",
+    "local_path": null,
+    "license": "Polyvore dataset terms",
+    "status": "blocked: "
+  }
+}
