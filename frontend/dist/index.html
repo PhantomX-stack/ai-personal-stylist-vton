@@ -1,66 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI Personal Stylist</title>
-<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI';background:linear-gradient(135deg,#667eea,#764ba2);min-height:100vh}.container{max-width:1200px;margin:0 auto;padding:20px}header{background:#fff;padding:20px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);margin-bottom:30px;text-align:center}h1{color:#667eea;font-size:2.5em;margin-bottom:10px}.status{background:#4caf50;color:#fff;padding:10px;border-radius:5px;text-align:center;margin-bottom:20px;font-weight:bold}.section{background:#fff;padding:30px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);margin-bottom:20px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:20px}.card{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:25px;border-radius:10px;cursor:pointer;transition:transform 0.3s}button{background:#667eea;color:#fff;border:none;padding:12px 25px;border-radius:5px;cursor:pointer;margin-top:10px;font-size:1em}button:hover{background:#764ba2}.outfit{background:#f5f5f5;padding:15px;border-radius:8px;margin-bottom:15px}.score{background:#667eea;color:#fff;padding:5px 10px;border-radius:5px;margin-left:10px}.chat-box{background:#f9f9f9;border:1px solid #ddd;border-radius:8px;padding:15px;height:300px;overflow-y:auto;margin-bottom:10px}.message{margin-bottom:10px}.user-msg{background:#667eea;color:#fff;text-align:right;padding:10px;border-radius:5px}.bot-msg{background:#e3f2fd;padding:10px;border-radius:5px}input{width:100%;padding:10px;margin:10px 0;border:1px solid #ddd;border-radius:5px;font-size:1em}h2{color:#333;margin-bottom:15px}h3,h4{color:#667eea;margin-bottom:10px}p{color:#666;line-height:1.6;margin-bottom:10px}</style>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>AI Personal Stylist - PhantomX</title>
+    <script src='https://cdn.tailwindcss.com'></script>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap' rel='stylesheet'>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .chat-window { bottom: 80px; right: 20px; width: 350px; height: 450px; }
+        .hidden { display: none; }
+    </style>
 </head>
-<body>
-<div class="container">
-<header>
-<h1>🎨 AI Personal Stylist - Virtual Try-On</h1>
-<div class="status">✅ WEBSITE IS LIVE AND WORKING! Frontend + Backend Fully Integrated</div>
-</header>
-<div class="section">
-<h2>🚀 Welcome to Your AI Fashion Assistant</h2>
-<p>Powered by advanced computer vision and AI algorithms</p>
-<div class="grid">
-<div class="card">
-<h3>📸 Vision Analysis</h3>
-<p>AI analyzes your features for perfect color matching</p>
-<button onclick="analyzeVision()">Start Analysis</button>
-</div>
-<div class="card">
-<h3>👗 Smart Recommendations</h3>
-<p>Get personalized outfit suggestions</p>
-<button onclick="getRecommendations()">Get Outfits</button>
-</div>
-<div class="card">
-<h3>💬 AI Chatbot</h3>
-<p>Ask our fashion expert anything</p>
-<button onclick="document.getElementById('chat-section').scrollIntoView()">Chat Now</button>
-</div>
-</div>
-</div>
-<div class="section" id="results">
-<h2>📊 Analysis Results</h2>
-<div id="result-content" style="display:none"><h3>Your Profile:</h3><p><strong>Skin Tone:</strong> <span id="skin-tone">-</span></p><p><strong>Body Type:</strong> <span id="body-type">-</span></p><p><strong>Recommended Colors:</strong> <span id="rec-colors">-</span></p></div>
-<div id="loading" style="display:none;text-align:center;color:#667eea;font-weight:bold">Loading...</div>
-</div>
-<div class="section">
-<h2>👗 Outfit Recommendations</h2>
-<div id="outfits-content" style="display:none"><div id="outfits-list"></div></div>
-<div id="outfits-loading" style="display:none;text-align:center;color:#667eea;font-weight:bold">Loading recommendations...</div>
-</div>
-<div class="section" id="chat-section">
-<h2>💬 AI Fashion Chatbot</h2>
-<div class="chat-box" id="chatbox"><div class="bot-msg"><strong>Bot:</strong> Hi! I'm your AI fashion assistant. How can I help?</div></div>
-<input type="text" id="chatinput" placeholder="Ask me anything..." onkeypress="handleChat(event)">
-<button onclick="sendChat()">Send</button>
-</div>
-<div class="section">
-<h2>✨ Technology Stack</h2>
-<p><strong>Frontend:</strong> HTML5 + JavaScript</p>
-<p><strong>Backend:</strong> Python HTTP Server</p>
-<p><strong>Status:</strong> ✅ FULLY OPERATIONAL</p>
-<p><strong>Live URL:</strong> <code>https://ideal-goggles-pxwrjg9659r2r5pv-3000.app.github.dev/</code></p>
-</div>
-</div>
-<script>
-const API="http://localhost:3000/api";
-function analyzeVision(){document.getElementById("loading").style.display="block";document.getElementById("result-content").style.display="none";setTimeout(()=>{document.getElementById("skin-tone").textContent="Warm";document.getElementById("body-type").textContent="Hourglass";document.getElementById("rec-colors").textContent="Reds, golds, earth tones";document.getElementById("loading").style.display="none";document.getElementById("result-content").style.display="block"},500)}
-function getRecommendations(){document.getElementById("outfits-loading").style.display="block";document.getElementById("outfits-content").style.display="none";setTimeout(()=>{let html="";const outfits=[{name:"Summer Casual",items:"T-shirt, Jeans",score:95},{name:"Evening Wear",items:"Dress, Heels",score:88},{name:"Business Casual",items:"Blazer, Pants",score:82}];outfits.forEach(o=>{html+=`<div class="outfit"><h4>${o.name}</h4><p>${o.items}</p><span class="score">Score: ${o.score}%</span></div>`});document.getElementById("outfits-list").innerHTML=html;document.getElementById("outfits-loading").style.display="none";document.getElementById("outfits-content").style.display="block"},500)}
-function handleChat(e){if(e.key==="Enter")sendChat()}
-function sendChat(){const msg=document.getElementById("chatinput").value;if(!msg)return;const cb=document.getElementById("chatbox");cb.innerHTML+=`<div class="user-msg"><strong>You:</strong> ${msg}</div>`;document.getElementById("chatinput").value="";setTimeout(()=>{cb.innerHTML+=`<div class="bot-msg"><strong>Bot:</strong> Great question! That's a wonderful fashion choice. Let me help you style it!</div>`;cb.scrollTop=cb.scrollHeight},300)}
-</script>
+<body class='bg-gray-50'>
+    <header class='gradient-bg text-white p-6 shadow-lg'>
+        <div class='container mx-auto flex justify-between items-center'>
+            <h1 class='text-2xl font-bold'>AI Stylist ✨</h1>
+            <nav class='space-x-6'><a href='#'>Home</a><a href='#'>Virtual Try-On</a></nav>
+        </div>
+    </header>
+    <main class='container mx-auto mt-12 px-6 text-center'>
+        <h2 class='text-4xl font-bold text-gray-800 mb-4'>Professional AI Wardrobe</h2>
+        <div class='grid md:grid-cols-3 gap-8 mt-12'>
+            <div class='bg-white p-6 rounded-xl shadow'>Analysis AI</div>
+            <div class='bg-white p-6 rounded-xl shadow'>Virtual Try-On</div>
+            <div class='bg-white p-6 rounded-xl shadow'>Outfit Planner</div>
+        </div>
+    </main>
+    <footer class='bg-gray-800 text-gray-300 mt-20 py-12'>
+        <div class='container mx-auto px-6 text-center'>
+            <p>Technology: React, Flask, PyTorch, GPT-4 Vision</p>
+            <p>Developer: <a href='https://github.com/PhantomX-stack' class='text-indigo-400'>PhantomX-stack</a></p>
+            <p class='text-xs mt-4'>&copy; 2024 AI Personal Stylist. MIT Licensed.</p>
+        </div>
+    </footer>
+    <div id='chat-btn' class='fixed bottom-6 right-6 gradient-bg w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl cursor-pointer shadow-xl'>💬</div>
+    <div id='chat-window' class='fixed chat-window bg-white shadow-2xl rounded-2xl border flex flex-col hidden'>
+        <div class='gradient-bg p-4 rounded-t-2xl text-white flex justify-between items-center'><span class='font-bold'>AI Assistant</span><button id='close-chat'>&times;</button></div>
+        <div id='chat-messages' class='flex-1 p-4 overflow-y-auto space-y-3 text-sm'></div>
+        <div class='p-4 border-t flex'><input id='chat-input' class='flex-1 border p-2' placeholder='Ask...'><button id='send-btn' class='p-2 bg-indigo-600 text-white'>Send</button></div>
+    </div>
+    <script>
+        const chatBtn = document.getElementById('chat-btn');
+        const chatWindow = document.getElementById('chat-window');
+        const closeChat = document.getElementById('close-chat');
+        const sendBtn = document.getElementById('send-btn');
+        const chatInput = document.getElementById('chat-input');
+        const chatMessages = document.getElementById('chat-messages');
+        chatBtn.onclick = () => chatWindow.classList.toggle('hidden');
+        closeChat.onclick = () => chatWindow.classList.add('hidden');
+        sendBtn.onclick = async () => {
+            const msg = chatInput.value;
+            if(!msg) return;
+            chatMessages.innerHTML += '<div>User: ' + msg + '</div>';
+            chatInput.value = '';
+            const res = await fetch('/api/chat', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({message:msg})});
+            const data = await res.json();
+            chatMessages.innerHTML += '<div>AI: ' + data.reply + '</div>';
+        };
+    </script>
 </body>
 </html>
+python3 app.py &
