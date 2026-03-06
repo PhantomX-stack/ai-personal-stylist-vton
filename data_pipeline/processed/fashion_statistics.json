@@ -1,0 +1,67 @@
+{
+  "datasets": {
+    "deepfashion": {
+      "items": 8000,
+      "source": "DeepFashion"
+    },
+    "fashion_mnist": {
+      "items": 7000,
+      "source": "Fashion-MNIST"
+    },
+    "polyvore": {
+      "items": 21000,
+      "source": "Polyvore Outfit Dataset"
+    }
+  },
+  "color_popularity": {
+    "black": 0.94,
+    "white": 0.92,
+    "navy": 0.86,
+    "grey": 0.84,
+    "olive": 0.81,
+    "burgundy": 0.76,
+    "camel": 0.74,
+    "silver": 0.72,
+    "magenta": 0.68,
+    "purple": 0.66,
+    "teal": 0.64,
+    "pastel": 0.7
+  },
+  "combination_popularity": {
+    "shirt+trousers": 0.9,
+    "hoodie+cargo": 0.82,
+    "blazer+trousers": 0.86,
+    "tee+linen": 0.78,
+    "top+skirt": 0.8
+  },
+  "seasonal_style_trends": {
+    "spring": {
+      "Smart Casual": 0.84,
+      "Streetwear": 0.75,
+      "Formal": 0.79,
+      "Relaxed": 0.88,
+      "Party": 0.77
+    },
+    "summer": {
+      "Smart Casual": 0.8,
+      "Streetwear": 0.67,
+      "Formal": 0.69,
+      "Relaxed": 0.95,
+      "Party": 0.74
+    },
+    "fall": {
+      "Smart Casual": 0.89,
+      "Streetwear": 0.9,
+      "Formal": 0.88,
+      "Relaxed": 0.7,
+      "Party": 0.87
+    },
+    "winter": {
+      "Smart Casual": 0.91,
+      "Streetwear": 0.92,
+      "Formal": 0.94,
+      "Relaxed": 0.51,
+      "Party": 0.9
+    }
+  }
+}
