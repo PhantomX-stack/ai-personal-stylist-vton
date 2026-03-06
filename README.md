@@ -23,7 +23,7 @@ cd ai-personal-stylist-vton
 # 2. Setup Backend
 cd backend
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\\Scripts\\activate
 pip install -r ../requirements.txt
 uvicorn app:app --reload
 # Backend runs at: http://localhost:8000
@@ -41,24 +41,24 @@ npm run dev
 ### 📚 Documentation
 
 **For detailed guides:**
-- 📖 [Complete Installation Guide](https://github.com/PhantomX-stack/ai-personal-stylist-vton#-installation-guide)
-- 🔧 [Deployment Instructions](https://github.com/PhantomX-stack/ai-personal-stylist-vton/blob/main/DEPLOYMENT.md)
-- 🐛 [Troubleshooting Guide](https://github.com/PhantomX-stack/ai-personal-stylist-vton/blob/main/TROUBLESHOOTING.md)
-- 🤝 [Contributing Guidelines](https://github.com/PhantomX-stack/ai-personal-stylist-vton/blob/main/CONTRIBUTING.md)
-- 📝 [Changelog](https://github.com/PhantomX-stack/ai-personal-stylist-vton/blob/main/CHANGELOG.md)
 
----
+- 📖 [Complete Installation Guide](#-installation-guide)
+- 🐳 [Docker Setup Guide](./DOCKER_SETUP.md) - Run with Docker Compose
+- 🔨 [Deployment Instructions](./DEPLOYMENT.md) - Deploy to production
+- 🐛 [Troubleshooting Guide](./TROUBLESHOOTING.md) - Fix common issues
+- 🤝 [Contributing Guidelines](./CONTRIBUTING.md) - Help improve the project
+- 📋 [Changelog](./CHANGELOG.md) - Version history and updates
 
 ## ✨ Features
 
 ### Core Capabilities
 
 - 🎯 **AI-Powered Skin Tone Analysis** - Detects your skin tone (warm, cool, neutral) for perfect color matching
-- 👤 **Body Type Estimation** - Analyzes body proportions for flattering outfit suggestions  
-- 🎨 **Smart Outfit Recommendations** - Ranks outfits by compatibility, trends, and mood
+- 👤 **Body Type Estimation** - Analyzes body proportions for flattering outfit suggestions
+- 🌨 **Smart Outfit Recommendations** - Ranks outfits by compatibility, trends, and mood
 - 👗 **Virtual Try-On** - See how clothes look on you before buying
 - 💬 **AI Fashion Chatbot** - Get styling advice instantly
-- 📊 **Trend Analytics** - Discover what's popular and why
+- 📈 **Trend Analytics** - Discover what's popular and why
 
 ### Technical Features
 
@@ -68,11 +68,10 @@ npm run dev
 - **In-Memory Processing** - No image storage for privacy
 - **Production Ready** - Comprehensive error handling and logging
 
----
-
-## 🛠️ Technology Stack
+## 🛀 Technology Stack
 
 ### Frontend
+
 - **React 18** - Modern UI framework
 - **Vite** - Lightning-fast build tool
 - **TailwindCSS** - Utility-first styling
@@ -80,6 +79,7 @@ npm run dev
 - **Axios** - HTTP client
 
 ### Backend
+
 - **FastAPI** - High-performance Python framework
 - **OpenCV** - Computer vision processing
 - **MediaPipe** - Pose & face detection
@@ -87,12 +87,11 @@ npm run dev
 - **Python 3.9+** - Latest features
 
 ### AI & ML
+
 - **Color Matching** - HSV-based classification
 - **Body Analysis** - Anthropometric calculations
 - **Recommendation Engine** - Weighted scoring algorithm
 - **Fashion Datasets** - DeepFashion, Fashion-MNIST, Polyvore
-
----
 
 ## 📋 Installation Guide
 
@@ -133,8 +132,9 @@ pip install -r ../requirements.txt
 uvicorn app:app --reload
 ```
 
-✅ **Backend runs at:** `http://localhost:8000`  
-📚 **API Docs at:** `http://localhost:8000/docs`
+✅ **Backend runs at:** http://localhost:8000
+
+📚 **API Docs at:** http://localhost:8000/docs
 
 ### Step 3: Setup Frontend
 
@@ -155,17 +155,15 @@ cp .env.example .env
 npm run dev
 ```
 
-✅ **Frontend runs at:** `http://localhost:5173`
+✅ **Frontend runs at:** http://localhost:5173
 
 ### Step 4: Open Application
 
-Open your browser and go to: **http://localhost:5173**
+Open your browser and go to: http://localhost:5173
 
-### ✨ You're Done!
+## ✨ You're Done!
 
 Your AI Personal Stylist is now running! 🎉
-
----
 
 ## 🔌 API Endpoints
 
@@ -195,11 +193,9 @@ GET /api/chat/history
 
 ### Interactive Docs
 
-Visit: **http://localhost:8000/docs** for Swagger UI
+Visit: http://localhost:8000/docs for Swagger UI
 
----
-
-## 🧠 Advanced AI Algorithm
+## 🗣 Advanced AI Algorithm
 
 ### Recommendation Scoring Formula
 
@@ -208,7 +204,6 @@ Outfit Score = 0.35 × Color_Match + 0.25 × Body_Style_Fit + 0.20 × Trend_Scor
 ```
 
 **Factors:**
-
 - **Color Match (35%)** - Compatibility with detected skin tone
 - **Body Fit (25%)** - Suitability for estimated body type
 - **Trend Score (20%)** - Popularity in fashion dataset
@@ -216,9 +211,7 @@ Outfit Score = 0.35 × Color_Match + 0.25 × Body_Style_Fit + 0.20 × Trend_Scor
 
 **Output:** Top 3 ranked outfits with confidence scores
 
----
-
-## 📊 Datasets
+## 📈 Datasets
 
 Powered by real fashion industry data:
 
@@ -234,33 +227,39 @@ Powered by real fashion industry data:
 - Seasonal style frequencies
 - Body type recommendations
 
----
-
 ## 🚀 Deployment
+
+### Docker Deployment (Recommended)
+
+See [DOCKER_SETUP.md](./DOCKER_SETUP.md) for complete Docker instructions:
+
+```bash
+git clone https://github.com/PhantomX-stack/ai-personal-stylist-vton.git
+cd ai-personal-stylist-vton
+docker-compose up --build
+```
+
+Then open: http://localhost:3000
 
 ### Frontend Deployment (Vercel)
 
-See [DEPLOYMENT.md](https://github.com/PhantomX-stack/ai-personal-stylist-vton/blob/main/DEPLOYMENT.md) for detailed instructions:
-
-1. Push code to GitHub
-2. Connect repository to Vercel
-3. Set build settings
-4. Add environment variables
-5. Deploy!
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions:
+- Push code to GitHub
+- Connect repository to Vercel
+- Set build settings
+- Add environment variables
+- Deploy!
 
 ### Backend Deployment (Render/Heroku)
 
-See [DEPLOYMENT.md](https://github.com/PhantomX-stack/ai-personal-stylist-vton/blob/main/DEPLOYMENT.md) for detailed instructions:
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions:
+- Create Web Service on Render
+- Connect GitHub repository
+- Configure environment
+- Set start command
+- Deploy!
 
-1. Create Web Service on Render
-2. Connect GitHub repository
-3. Configure environment
-4. Set start command
-5. Deploy!
-
----
-
-## 📈 Performance Metrics
+## 📋 Performance Metrics
 
 | Metric | Target | Status |
 |--------|--------|--------|
@@ -269,8 +268,6 @@ See [DEPLOYMENT.md](https://github.com/PhantomX-stack/ai-personal-stylist-vton/b
 | Page Load | < 3s | ✅ |
 | ML Model Accuracy | 85%+ | ✅ |
 | Uptime | 99.9% | ✅ |
-
----
 
 ## 🔐 Security
 
@@ -281,8 +278,6 @@ See [DEPLOYMENT.md](https://github.com/PhantomX-stack/ai-personal-stylist-vton/b
 - ✅ Environment variables for sensitive data
 - ✅ HTTPS only in production
 
----
-
 ## 📚 Learning Resources
 
 - [MediaPipe Documentation](https://developers.google.com/mediapipe)
@@ -292,22 +287,18 @@ See [DEPLOYMENT.md](https://github.com/PhantomX-stack/ai-personal-stylist-vton/b
 - [TailwindCSS](https://tailwindcss.com/)
 - [Vite Documentation](https://vitejs.dev/)
 
----
+## 🗺 Roadmap
 
-## 🗺️ Roadmap
-
-- [x] Core AI styling engine
-- [x] Virtual try-on system  
-- [x] Chatbot integration
-- [ ] User authentication & profiles
-- [ ] Saved style preferences
-- [ ] Real-time collaborative styling
-- [ ] Mobile app (iOS/Android)
-- [ ] AR try-on experience
-- [ ] Shopping integration (Shopify/Amazon)
-- [ ] Social sharing features
-
----
+- ✅ Core AI styling engine
+- ✅ Virtual try-on system
+- ✅ Chatbot integration
+- ☐ User authentication & profiles
+- ☐ Saved style preferences
+- ☐ Real-time collaborative styling
+- ☐ Mobile app (iOS/Android)
+- ☐ AR try-on experience
+- ☐ Shopping integration (Shopify/Amazon)
+- ☐ Social sharing features
 
 ## 🤝 Contributing
 
@@ -319,21 +310,15 @@ Contributions are welcome! Please:
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-See [CONTRIBUTING.md](https://github.com/PhantomX-stack/ai-personal-stylist-vton/blob/main/CONTRIBUTING.md) for detailed guidelines.
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines.
 
----
+## 📋 License
 
-## 📝 License
-
-MIT License - See [LICENSE](LICENSE) file for details
-
----
+MIT License - See [LICENSE](./LICENSE) file for details
 
 ## 👨‍💻 Author
 
 **PhantomX** - [@PhantomX-stack](https://github.com/PhantomX-stack)
-
----
 
 ## 🙏 Acknowledgments
 
@@ -344,23 +329,15 @@ MIT License - See [LICENSE](LICENSE) file for details
 - Fashion researchers for dataset contributions
 - All contributors and testers
 
----
-
 ## 📞 Support
 
 Have questions? Issues?
 
 - 🐛 [Report Issues](https://github.com/PhantomX-stack/ai-personal-stylist-vton/issues)
-- 💬 [Start Discussion](https://github.com/PhantomX-stack/ai-personal-stylist-vton/discussions)  
-- 📚 Check [Troubleshooting Guide](https://github.com/PhantomX-stack/ai-personal-stylist-vton/blob/main/TROUBLESHOOTING.md)
-- 📖 See [Contributing Guide](https://github.com/PhantomX-stack/ai-personal-stylist-vton/blob/main/CONTRIBUTING.md)
+- 💬 [Start Discussion](https://github.com/PhantomX-stack/ai-personal-stylist-vton/discussions)
+- 📚 Check [Troubleshooting Guide](./TROUBLESHOOTING.md)
+- 📖 See [Contributing Guide](./CONTRIBUTING.md)
 
----
-
-<div align="center">
-
-**Made with ❤️ for fashion enthusiasts & AI lovers**
+Made with ❤️ for fashion enthusiasts & AI lovers
 
 ⭐ Star us on GitHub if you found this helpful!
-
-</div>
