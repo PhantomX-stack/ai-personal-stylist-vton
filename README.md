@@ -4,6 +4,7 @@
 >
 > ## 🚀 Live Demo
 
+**🌐 Live Integrated Website (GitHub Codespaces):** https://ideal-goggles-pxwrjg9659r2r5pv-3000.app.github.dev/ ✅ **[WORKING - Click to Visit!]**
 **Frontend Demo (Vercel):** https://ai-personal-stylist.vercel.app
 
 **Backend API (Render):** https://ai-personal-stylist-api.onrender.com
