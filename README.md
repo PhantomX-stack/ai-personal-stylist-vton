@@ -1,6 +1,15 @@
 # 🎨 AI Personal Stylist & Virtual Try-On
 
 > **AI-Powered Fashion Assistant** | Personalized Outfit Recommendations | Real-Time Virtual Clothing Try-On
+>
+> ## 🚀 Live Demo
+
+**Frontend Demo (Vercel):** https://ai-personal-stylist.vercel.app
+
+**Backend API (Render):** https://ai-personal-stylist-api.onrender.com
+
+**API Docs:** https://ai-personal-stylist-api.onrender.com/docs
+
 
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
